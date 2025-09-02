@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>TheLeftExit.Win32</id>
+		<version>1.0.0</version>
+		<authors>TheLeftExit</authors>
+		<license type="expression">Unlicense</license>
+		<repository type="git" url="https://github.com/TheLeftExit/TheLeftExit.Win32" />
+		<description>Hand-written Win32 interop bindings for use in my projects.</description>
+		<dependencies>
+			<group targetFramework="net10.0" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\*.dll" target="lib\net10.0" />
+	</files>
+</package>
