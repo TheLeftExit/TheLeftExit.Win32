@@ -1,0 +1,15 @@
+on:
+  push
+
+jobs:
+  publish:
+    name: Build and publish to NuGet
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-dotnet@v3.5.2
+      with:
+        dotnet-version: 10
+        dotnet-quality: 'preview'
+    - uses: actions/checkout@v5.0.0
+    - run: dotnet publish -o bin
+    - run: dotnet nuget push "bin\*.nupkg" -k ${{ NUGET_KEY }}
