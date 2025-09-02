@@ -12,4 +12,4 @@ jobs:
         dotnet-quality: 'preview'
     - uses: actions/checkout@v5.0.0
     - run: dotnet publish -o bin
-    - run: dotnet nuget push "bin\*.nupkg" -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
+    - run: dotnet nuget push "bin/*.nupkg" -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
