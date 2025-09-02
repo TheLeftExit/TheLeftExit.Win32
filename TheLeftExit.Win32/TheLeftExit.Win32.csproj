@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\SharedGlobalUsings.cs" Link="SharedGlobalUsings.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TheLeftExit.Win32.Core\TheLeftExit.Win32.Core.csproj" />
+	</ItemGroup>
+
+</Project>

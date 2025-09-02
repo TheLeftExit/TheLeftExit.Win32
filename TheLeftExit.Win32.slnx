@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="README.md" />
+    <File Path="SharedGlobalUsings.cs" />
+  </Folder>
+  <Project Path="TheLeftExit.Win32.Core/TheLeftExit.Win32.Core.csproj" />
+  <Project Path="TheLeftExit.Win32/TheLeftExit.Win32.csproj" />
+</Solution>
