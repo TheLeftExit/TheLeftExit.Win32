@@ -6,6 +6,7 @@ jobs:
     name: Build and publish to NuGet
     runs-on: ubuntu-latest
     steps:
+    - run: sudo apt-get install -y mono-runtime
     - uses: nuget/setup-nuget@v2
     - uses: actions/setup-dotnet@v4
       with:
