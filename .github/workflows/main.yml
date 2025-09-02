@@ -4,9 +4,8 @@ on:
 jobs:
   publish:
     name: Build and publish to NuGet
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-    - run: sudo apt-get install -y mono-runtime
     - uses: nuget/setup-nuget@v2
     - uses: actions/setup-dotnet@v4
       with:
@@ -15,4 +14,4 @@ jobs:
     - uses: actions/checkout@v5.0.0
     - run: dotnet publish -o bin
     - run: nuget pack -OutputDirectory bin
-    - run: dotnet nuget push "bin/*.nupkg" -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
+    - run: dotnet nuget push "bin\*.nupkg" -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
