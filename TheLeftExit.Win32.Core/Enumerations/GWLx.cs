@@ -1,4 +1,6 @@
-﻿public static partial class Win32Macros
+﻿namespace TheLeftExit.Win32;
+
+public static partial class Win32Macros
 {
     public const int GWLx_STYLE = (-16);
     public const int GWLx_EXSTYLE = (-20);

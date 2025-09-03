@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>TheLeftExit.Win32</id>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 		<authors>TheLeftExit</authors>
 		<license type="expression">Unlicense</license>
 		<repository type="git" url="https://github.com/TheLeftExit/TheLeftExit.Win32" />
