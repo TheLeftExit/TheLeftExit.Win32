@@ -1,0 +1,17 @@
+on:
+  push
+
+jobs:
+  publish:
+    name: Build and publish to NuGet
+    runs-on: windows-latest
+    steps:
+    - uses: nuget/setup-nuget@v2
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10
+        dotnet-quality: 'preview'
+    - uses: actions/checkout@v5.0.0
+    - run: dotnet publish -o bin
+    - run: nuget pack -OutputDirectory bin
+    - run: dotnet nuget push "bin\*.nupkg" -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
