@@ -32,6 +32,7 @@ global using HBITMAP = nint;
 global using HGDIOBJ = nint;
 global using HRSRC = nint;
 global using HGLOBAL = nint;
+global using HRESULT = int;
 
 global using unsafe PVOID = void*;
 global using unsafe LPVOID = void*;
