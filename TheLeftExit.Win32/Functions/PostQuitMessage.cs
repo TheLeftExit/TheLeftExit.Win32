@@ -11,8 +11,8 @@ public static unsafe partial class Win32
         Win32ExceptionHelper.ThrowOnError();
     }
 
-    [LibraryImport("user32.dll", EntryPoint = "PostQuitMessage")]
-    private static partial void _PostQuitMessage(
+    [LibraryImport("user32.dll", EntryPoint = "PostQuitMessage", SetLastError = true)]
+    private static partial void __PostQuitMessage(
         int nExitCode
     );
 }

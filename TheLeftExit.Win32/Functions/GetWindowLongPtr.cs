@@ -10,23 +10,23 @@ public static unsafe partial class Win32
     {
         if (Environment.Is64BitProcess)
         {
-            return _GetWindowLongPtr(hWnd, nIndex).ThrowOnError();
+            return __GetWindowLongPtr(hWnd, nIndex).ThrowOnError();
         }
         else
         {
-            return _GetWindowLong(hWnd, nIndex).ThrowOnError();
+            return __GetWindowLong(hWnd, nIndex).ThrowOnError();
         }
     }
 
-    [LibraryImport("user32.dll", EntryPoint = "GetWindowLongPtrW")]
-    private static partial LONG_PTR _GetWindowLongPtr(
+    [LibraryImport("user32.dll", EntryPoint = "GetWindowLongPtrW", SetLastError = true)]
+    private static partial LONG_PTR __GetWindowLongPtr(
         HWND hWnd,
         int nIndex
     );
 
     // https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowlongw
-    [LibraryImport("user32.dll", EntryPoint = "GetWindowLongW")]
-    private static partial LONG _GetWindowLong(
+    [LibraryImport("user32.dll", EntryPoint = "GetWindowLongW", SetLastError = true)]
+    private static partial LONG __GetWindowLong(
         HWND hWnd,
         int nIndex
     );
